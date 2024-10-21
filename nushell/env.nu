@@ -89,8 +89,9 @@ $env.PATH = ($env.PATH
 	| split row (char esep) 
 	| append '/opt/homebrew/bin/'
 	| append '/usr/local/bin/'
+	| append '/Users/dzmfg/.cargo/bin/'
+	| append '/Users/dzmfg/workspace/tools/envs/base/bin/'
 	| append '/Users/dzmfg/.local/share/bin/')
-overlay use /Users/dzmfg/workspace/tools/envs/base/bin/activate.nu
 
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:

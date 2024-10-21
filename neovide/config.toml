@@ -11,7 +11,7 @@ title-hidden = true
 vsync = true
 wsl = false
 
-# [font]
-# normal = [] # Will use the bundled Fira Code Nerd Font by default
-# size = 14.0
+[font]
+normal = ["FantasqueSansM Nerd Font Propo"] # Will use the bundled Fira Code Nerd Font by default
+size = 17.5
 

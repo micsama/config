@@ -903,4 +903,13 @@ $env.config = {
 
 alias nu-open = open
 alias open = ^open
-source /Users/dzmfg/.local/share/atuin/init.nu
+source ~/.local/share/atuin/init.nu
+def --env y [...args] {
+		let tmp = (mktemp -t "yazi-cwd.XXXXXX")
+		yazi ...$args --cwd-file $tmp
+		let cwd = (open $tmp)
+		if $cwd != "" and $cwd != $env.PWD {
+		cd $cwd
+	}
+		rm -fp $tmp
+}
